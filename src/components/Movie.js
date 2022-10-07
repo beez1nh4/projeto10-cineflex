@@ -1,11 +1,14 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
-export default function Movie({img, alt}) {
+export default function Movie({id, img, alt}) {
     return(
         <>
+        <Link to={`sessoes/${id}`}>
             <MovieItem>
                 <img src={img} alt={alt}></img>
             </MovieItem>
+        </Link>
         </>
     )
 }

@@ -13,14 +13,14 @@ export default function MovieChoicePage() {
     })
     promise.catch((err)=> {
         console.log("erro! =>", err.response.data)
-    })}, arrayMovies)
+    })}, [])
     
     return(
         <>
         <MovieChoiceContainer>
             <p>Selecione o filme</p>
             <Movies>
-                {arrayMovies.map((movie) => <Movie key={movie.id} alt={movie.title} img={movie.posterURL}></Movie>)}
+                {arrayMovies.map((movie) => <Movie key={movie.id} id={movie.id} alt={movie.title} img={movie.posterURL}></Movie>)}
             </Movies>
         </MovieChoiceContainer>
         </>
@@ -28,6 +28,7 @@ export default function MovieChoicePage() {
 }
 
 const MovieChoiceContainer = styled.div`
+    margin-top: 67px;
     width: 100%;
     background-color: #FFFFFF;
     display: flex;
@@ -44,7 +45,6 @@ const MovieChoiceContainer = styled.div`
         letter-spacing: 0.04em;
         color: #293845;
         margin-top: 39px;
-        margin-bottom: 39px;
     }
 `
 const Movies = styled.div`

@@ -16,6 +16,9 @@ const NavBarElement = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     & p{
         font-family: 'Roboto';
         font-style: normal;
