@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-export default function Movie() {
+export default function Movie({img, alt}) {
     return(
         <>
             <MovieItem>
-                <img src="https://upload.wikimedia.org/wikipedia/pt/e/e6/Enola_Holmes_poster.jpeg" alt=""></img>
+                <img src={img} alt={alt}></img>
             </MovieItem>
         </>
     )

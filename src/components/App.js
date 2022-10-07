@@ -5,7 +5,6 @@ import MovieChoicePage from "../pages/MovieChoicePage"
 import MovieSeatPage from "../pages/MovieSeatPage"
 import MovieSessionPage from "../pages/MovieSessionPage"
 import SuccessPage from "../pages/SuccessPage"
-import Footer from "./Footer"
 
 export default function App() {
     return (
@@ -19,7 +18,6 @@ export default function App() {
             <Route path="/assentos/:idSessao" element={<MovieSeatPage/>}/>
             <Route path="/sucesso" element={<SuccessPage/>}/>
         </Routes>
-        <Footer></Footer>
         </BrowserRouter>
         </>
     )
