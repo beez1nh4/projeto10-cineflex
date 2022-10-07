@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import GlobalStyle from "./GlobalStyle"
 import NavBar from "./NavBar"
 import MovieChoicePage from "../pages/MovieChoicePage"
 import MovieSeatPage from "../pages/MovieSeatPage"
@@ -8,6 +9,8 @@ import Footer from "./Footer"
 
 export default function App() {
     return (
+        <>
+        <GlobalStyle/>
         <BrowserRouter>
         <NavBar></NavBar>
         <Routes>
@@ -18,5 +21,6 @@ export default function App() {
         </Routes>
         <Footer></Footer>
         </BrowserRouter>
+        </>
     )
 }
