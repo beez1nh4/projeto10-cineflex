@@ -8,16 +8,21 @@ export default function Session({weekday, date, showtimes}) {
             <SessionContainer>
             <p>{weekday} - {date}</p>
             <Showtimes>
-                {showtimes.map((time)=> <Showtime key={time.id} showtime={time.name}></Showtime>)}
+                {showtimes.map((time)=> <Showtime key={time.id} id={time.id}showtime={time.name}></Showtime>)}
             </Showtimes>
             </SessionContainer>
         </>
     )
 }
 
-function Showtime({showtime}){
+function Showtime({id, showtime}){
     return(
+        <>
+        <Link to={`/assentos/${id}`}>
         <ButtonShowtime>{showtime}</ButtonShowtime>
+        </Link>
+        </>
+        
     )
 }
 

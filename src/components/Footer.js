@@ -6,7 +6,7 @@ export default function Footer({session, isSession}) {
         <FooterContainer>
             {isSession ? 
             <><img src={session.posterURL}/>
-            <p>{session.title}<br/>Quinta-feira - 15:00</p></> 
+            <p>{session.title}<br/>{session.weekday} - {session.time}</p></> 
             :
             <><img src={session.posterURL}/>
             <p>{session.title}</p> </>}

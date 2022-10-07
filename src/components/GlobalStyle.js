@@ -48,6 +48,13 @@ table {
 }
 strong {
 	font-weight: bold;
-}`
+}
+a{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+`
 
 export default GlobalStyle;

@@ -15,7 +15,7 @@ export default function MovieSessionPage() {
         promise.then((res) => {
           setSession(res.data)
           setDays(res.data.days)
-          //console.log(res.data)
+          console.log(res.data)
         })
     
         promise.catch((err) => {
@@ -59,6 +59,7 @@ const SessionPageContainer = styled.div`
 const Sessions = styled.div`
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
 `
