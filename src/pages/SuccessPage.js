@@ -1,5 +1,6 @@
 export default function SuccessPage() {
     return (
-        <p>sucesso!</p>
+        <p>Pedido feito
+        com sucesso!</p>
     )
 }         
