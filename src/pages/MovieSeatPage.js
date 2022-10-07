@@ -11,6 +11,8 @@ export default function MovieSeatPage() {
     const {idSessao} = useParams()
     const [seats, setSeats] = useState([])
     const [session, setSession] = useState({})
+    const [ids, setIds] = useState([])
+
     useEffect(() => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`)
     
@@ -35,7 +37,7 @@ export default function MovieSeatPage() {
         <SeatPageContainer>
             <p>Selecione o(s) assento(s)</p>
             <Seats>
-                {seats.map((seat) => <Seat key={seat.id} seat={seat}></Seat>)}
+                {seats.map((seat) => <Seat key={seat.id} seat={seat} ids={ids} setIds={setIds} ></Seat>)}
             </Seats>
             <Subtitle/>
             <SelectForm></SelectForm>
