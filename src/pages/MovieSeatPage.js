@@ -5,6 +5,7 @@ import {useState, useEffect} from "react"
 import axios from "axios"
 import Seat from "../components/Seat"
 import Subtitle from "../components/Subtitle"
+import SelectForm from "../components/SelectForm"
 
 export default function MovieSeatPage() {
     const {idSessao} = useParams()
@@ -37,6 +38,7 @@ export default function MovieSeatPage() {
                 {seats.map((seat) => <Seat key={seat.id} seat={seat}></Seat>)}
             </Seats>
             <Subtitle/>
+            <SelectForm></SelectForm>
         </SeatPageContainer>
         <Footer session={session} isSession={true}></Footer>
         </>
