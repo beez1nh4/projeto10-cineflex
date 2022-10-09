@@ -1,17 +1,24 @@
 import styled from "styled-components"
 
-export default function SelectForm() {
+export default function SelectForm({name, setName, cpf, setCpf}) {
+
+    function handleName(e) {
+        setName(e.target.value)
+    }
+    function handleCpf(e) {
+        setCpf(e.target.value)
+    }
     return (
         <>
-        <form>
+        <FormContainer>
             <Label
                 name="name">
                 Nome do comprador:
             </Label>  
             <Input
                 name="nome"
-                //value={form.name}
-                //onChange={handleForm}
+                value={name}
+                onChange={handleName}
                 type="text"
                 placeholder="   Digite seu nome..."
                 required
@@ -22,23 +29,30 @@ export default function SelectForm() {
             </Label>  
             <Input
                 name="cpf"
-                //value={form.cpf}
-                //onChange={handleForm}
+                value={cpf}
+                onChange={handleCpf}
                 type="text"
                 placeholder="   Digite seu CPF..."
                 required
             />
-        </form> 
+        </FormContainer>
         </>
     )
 }
 
+const FormContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 41px;
+`
 const Input = styled.input`
     width: 327px;
     height: 51px;
     background: #FFFFFF;
     border: 1px solid #D5D5D5;
     border-radius: 3px;
+    margin-bottom: 7px;
 
   ::placeholder {
     font-family: 'Roboto';
