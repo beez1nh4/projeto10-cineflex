@@ -39,6 +39,10 @@ export default function MovieSeatPage({request, setRequest}) {
         })
       },[])
     function verifyRequest(){
+        if (ids.length ===0){
+            alert("Você precisa escolher pelo menos 1 assento")
+            return false
+        }
         if (name ==="" || name === undefined){
             alert("Você precisa colocar um nome!")
             return false
@@ -137,4 +141,8 @@ const ButtonSubmit = styled.button`
     text-align: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    &:hover {
+    border: 3px solid #26abff;
+    cursor: pointer;
+  }
 `

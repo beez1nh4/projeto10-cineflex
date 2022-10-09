@@ -1,9 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { useNavigate } from "react-router-dom"
 
 export default function NavBar() {
+    const navigate = useNavigate()
+    function goHome(){
+        navigate("/")
+    }
+    
     return (
-        <NavBarElement>
+        <NavBarElement onClick={goHome}>
             <p>CINEFLEX</p>
         </NavBarElement>
     )
@@ -26,5 +32,8 @@ const NavBarElement = styled.div`
         font-size: 34px;
         line-height: 40px;
         color: #E8833A;
+    }
+    &:hover {
+    cursor: pointer;
     }
 `

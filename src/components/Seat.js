@@ -58,5 +58,8 @@ const ButtonSeat = styled.button`
     background: ${props => props.color};
     border: 1px solid ${props => props.border};
     border-radius: 12px;
-
+    &:hover {
+    border: 0.5px solid #26abff;
+    cursor: pointer;
+  }
 `

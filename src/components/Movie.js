@@ -27,4 +27,7 @@ const MovieItem = styled.div`
         width: 129px;
         height: 193px;
     }
+    &:hover {
+    border: 3px solid #26abff;
+  }
 `

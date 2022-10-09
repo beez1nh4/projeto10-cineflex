@@ -46,6 +46,7 @@ const MovieChoiceContainer = styled.div`
         letter-spacing: 0.04em;
         color: #293845;
         margin-top: 39px;
+        margin-bottom: 39px;
     }
 `
 const Movies = styled.div`

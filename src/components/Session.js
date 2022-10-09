@@ -57,6 +57,10 @@ const ButtonShowtime = styled.button`
     border-radius: 3px;
     border: 0;
     margin-right: 8px;
+    &:hover {
+    border: 3px solid #26abff;
+    cursor: pointer;
+  }
 `
 const Showtimes = styled.div`
     width: 100%;

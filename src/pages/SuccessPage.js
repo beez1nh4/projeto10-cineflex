@@ -1,6 +1,8 @@
 import styled from "styled-components"
+import { useNavigate } from "react-router-dom";
 
 export default function SuccessPage({request, setRequest}) {
+    const navigate = useNavigate()
     const nameFormat = request.name.split(/ /g).map(word =>
         `${word.substring(0,1).toUpperCase()}${word.substring(1)}`)
     .join(" "); //coloca a primeira letra em maiúsculo
@@ -12,6 +14,9 @@ export default function SuccessPage({request, setRequest}) {
         } if (i===8){
             cpfFormat+="-"
         }
+    }
+    function goHome(){
+        navigate("/")
     }
     return (
         <>
@@ -26,7 +31,7 @@ export default function SuccessPage({request, setRequest}) {
         <Information>Nome: {nameFormat}</Information>
         <Information>CPF: {cpfFormat}</Information>
         <AlignButton>
-        <HomeButton>Voltar para Home</HomeButton>
+        <HomeButton onClick={goHome}>Voltar para Home</HomeButton>
         </AlignButton>
         </SuccessContainer>
         </>
@@ -83,6 +88,10 @@ const HomeButton = styled.button`
     letter-spacing: 0.04em;
     color: #FFFFFF;
     align-self: center;
+    &:hover {
+    border: 3px solid #26abff;
+    cursor: pointer;
+  }
 `
 const AlignButton = styled.div`
     margin-top: 96px;
