@@ -5,11 +5,11 @@ export default function Footer({session, isSession}) {
         <>
         <FooterContainer>
             {isSession ? 
-            <><img src={session.posterURL} alt=""/>
-            <p>{session.title}<br/>{session.weekday} - {session.time}</p></> 
+            <><img src={session.posterURL} alt="" data-identifier="movie-img-preview"/>
+            <p data-identifier="movie-and-session-infos-preview">{session.title}<br/>{session.weekday} - {session.time}</p></> 
             :
-            <><img alt=""src={session.posterURL}/>
-            <p>{session.title}</p> </>}
+            <><img alt=""src={session.posterURL} data-identifier="movie-img-preview"/>
+            <p data-identifier="movie-and-session-infos-preview">{session.title}</p> </>}
         </FooterContainer>
         
         </>

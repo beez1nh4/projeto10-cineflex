@@ -45,7 +45,7 @@ export default function Seat({seat, ids, setIds, seatNameArray, setSeatNameArray
     
     return(
         <>
-        <ButtonSeat onClick={chooseSeat} color={color} border={border} >{seatNumber}</ButtonSeat>
+        <ButtonSeat data-identifier="seat" onClick={chooseSeat} color={color} border={border} >{seatNumber}</ButtonSeat>
         </>     
     )
 }
@@ -59,7 +59,7 @@ const ButtonSeat = styled.button`
     border: 1px solid ${props => props.border};
     border-radius: 12px;
     &:hover {
-    border: 0.5px solid #26abff;
+    border: 1.75px solid #26abff;
     cursor: pointer;
   }
 `

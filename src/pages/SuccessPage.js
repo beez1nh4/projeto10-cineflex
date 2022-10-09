@@ -23,15 +23,15 @@ export default function SuccessPage({request, setRequest}) {
         <SuccessContainer>
         <Sucesso>Pedido feito <br/> com sucesso!</Sucesso>
         <Title>Filme e sessão</Title>
-        <Information>{request.title}</Information>
-        <Information>{request.date} {request.time}</Information>
+        <Information data-identifier="movie-session-infos-reserve-finished">{request.title}</Information>
+        <Information data-identifier="movie-session-infos-reserve-finished">{request.date} {request.time}</Information>
         <Title>Ingressos</Title>
-        {request.ids.map((num) => <Information key={num}>Assento {num}</Information>)}
+        {request.ids.map((num) => <Information data-identifier="seat-infos-reserve-finished" key={num}>Assento {num}</Information>)}
         <Title>Comprador</Title>
-        <Information>Nome: {nameFormat}</Information>
-        <Information>CPF: {cpfFormat}</Information>
+        <Information data-identifier="buyer-infos-reserve-finished">Nome: {nameFormat}</Information>
+        <Information data-identifier="buyer-infos-reserve-finished">CPF: {cpfFormat}</Information>
         <AlignButton>
-        <HomeButton onClick={goHome}>Voltar para Home</HomeButton>
+        <HomeButton  data-identifier="back-to-home-btn" onClick={goHome}>Voltar para Home</HomeButton>
         </AlignButton>
         </SuccessContainer>
         </>

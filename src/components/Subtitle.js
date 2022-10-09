@@ -2,23 +2,23 @@ import styled from "styled-components"
 
 export default function Subtitle() {
     const subtitles = [
-        {id:0, color:"#1AAE9E", meaning: "Selecionado", border: "#0E7D71"},
-        {id:1, color:"#C3CFD9;", meaning: "Disponível", border: "#7B8B99"},
-        {id: 2, color:"#FBE192", meaning: "Indisponível", border: "#F7C52B"}
+        {id:0, color:"#1AAE9E", meaning: "Selecionado", border: "#0E7D71", dataIdentifier: "seat-selected-subtitle"},
+        {id:1, color:"#C3CFD9;", meaning: "Disponível", border: "#7B8B99", dataIdentifier: "seat-available-subtitle"},
+        {id: 2, color:"#FBE192", meaning: "Indisponível", border: "#F7C52B", dataIdentifier: "seat-unavailable-subtitle"}
     ]
     return(
         <>
             <Subtitles>
-                {subtitles.map((item) => <SubtitleItem key={item.id}color={item.color} meaning={item.meaning} border={item.border}></SubtitleItem>)}
+                {subtitles.map((item) => <SubtitleItem key={item.id}color={item.color} meaning={item.meaning} border={item.border} dataIdentifier={item.dataIdentifier}></SubtitleItem>)}
             </Subtitles>
             
         </>
     )
 }
-function SubtitleItem({color, meaning, border}){
+function SubtitleItem({color, meaning, border, dataIdentifier}){
     return(
         <>
-            <SubtitleElement>
+            <SubtitleElement data-identifier={dataIdentifier}>
                 <Ball color={color} border={border}></Ball>
                 <TextSubtitle>{meaning}</TextSubtitle>
             </SubtitleElement>

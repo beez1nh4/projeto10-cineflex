@@ -90,7 +90,7 @@ export default function MovieSeatPage({request, setRequest}) {
             </Seats>
             <Subtitle/>
             <SelectForm name={name} setName={setName} cpf={cpf} setCpf={setCpf}></SelectForm>
-            <ButtonSubmit onClick={finishRequest}>Reservar assento(s)</ButtonSubmit> 
+            <ButtonSubmit data-identifier="reservation-btn" onClick={finishRequest}>Reservar assento(s)</ButtonSubmit> 
         </SeatPageContainer>
         <Footer session={session} isSession={true}></Footer>
         </>

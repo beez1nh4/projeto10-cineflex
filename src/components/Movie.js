@@ -5,7 +5,7 @@ export default function Movie({id, img, alt}) {
     return(
         <>
         <Link to={`sessoes/${id}`}>
-            <MovieItem>
+            <MovieItem data-identifier="movie-outdoor">
                 <img src={img} alt={alt}></img>
             </MovieItem>
         </Link>

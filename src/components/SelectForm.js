@@ -22,6 +22,7 @@ export default function SelectForm({name, setName, cpf, setCpf}) {
                 type="text"
                 placeholder="   Digite seu nome..."
                 required
+                data-identifier="buyer-name-input"
             />
             <Label
                 name="cpf">
@@ -34,6 +35,7 @@ export default function SelectForm({name, setName, cpf, setCpf}) {
                 type="text"
                 placeholder="   Digite seu CPF..."
                 required
+                data-identifier="buyer-cpf-input"
             />
         </FormContainer>
         </>
@@ -61,6 +63,9 @@ const Input = styled.input`
     font-size: 18px;
     line-height: 21px;
     color: #AFAFAF;
+  }
+  &:hover {
+    border: 3px solid #26abff;
   }
 ` 
 const Label = styled.label`
