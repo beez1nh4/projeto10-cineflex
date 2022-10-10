@@ -4,8 +4,8 @@ import Movie from "../components/Movie"
 import axios from "axios"
 import {useState, useEffect} from "react"
 
-export default function MovieChoicePage({setRequest}) {
-    
+export default function MovieChoicePage({setRequest, setAllowNavigate}) {
+    setAllowNavigate(false)
     const [arrayMovies, setArrayMovies] = useState([])
     useEffect(()=> {const URL = "https://mock-api.driven.com.br/api/v5/cineflex/movies"
     const promise = axios.get(URL)

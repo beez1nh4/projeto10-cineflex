@@ -8,7 +8,8 @@ import Subtitle from "../components/Subtitle"
 import SelectForm from "../components/SelectForm"
 import { useNavigate } from "react-router-dom"
 
-export default function MovieSeatPage({request, setRequest}) {
+export default function MovieSeatPage({request, setRequest, setAllowNavigate}) {
+    setAllowNavigate(true)
     const {idSessao} = useParams()
     const [seats, setSeats] = useState([])
     const [session, setSession] = useState({})

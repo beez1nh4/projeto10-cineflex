@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import { useNavigate } from "react-router-dom";
 
-export default function SuccessPage({request, setRequest}) {
+export default function SuccessPage({request, setRequest, setAllowNavigate}) {
+    setAllowNavigate(true)
     const navigate = useNavigate()
     const nameFormat = request.name.split(/ /g).map(word =>
         `${word.substring(0,1).toUpperCase()}${word.substring(1)}`)

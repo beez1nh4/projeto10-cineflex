@@ -9,16 +9,17 @@ import { useState } from "react"
 
 export default function App() {
     const [request, setRequest] = useState({})
+    const [allowNavigate, setAllowNavigate] = useState(false)
     return (
         <>
         <GlobalStyle/>
         <BrowserRouter>
-        <NavBar></NavBar>
+        <NavBar allowNavigate={allowNavigate}></NavBar>
         <Routes>
-            <Route path="/" element={<MovieChoicePage setRequest={setRequest}/>}/>
-            <Route path="/sessoes/:idFilme" element={<MovieSessionPage/>}/>
-            <Route path="/assentos/:idSessao" element={<MovieSeatPage request={request} setRequest={setRequest}/>}/>
-            <Route path="/sucesso" element={<SuccessPage request={request} setRequest={setRequest}/>}/>
+            <Route path="/" element={<MovieChoicePage setRequest={setRequest} setAllowNavigate={setAllowNavigate}/>}/>
+            <Route path="/sessoes/:idFilme" element={<MovieSessionPage setAllowNavigate={setAllowNavigate}/>}/>
+            <Route path="/assentos/:idSessao" element={<MovieSeatPage request={request} setRequest={setRequest} setAllowNavigate={setAllowNavigate}/>}/>
+            <Route path="/sucesso" element={<SuccessPage request={request} setRequest={setRequest} setAllowNavigate={setAllowNavigate}/>}/>
         </Routes>
         </BrowserRouter>
         </>

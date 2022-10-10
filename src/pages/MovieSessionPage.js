@@ -5,7 +5,8 @@ import {useState, useEffect} from "react"
 import axios from "axios"
 import Session from "../components/Session"
 
-export default function MovieSessionPage() {
+export default function MovieSessionPage({setAllowNavigate}) {
+    setAllowNavigate(true)
     const {idFilme} = useParams()
     const [session, setSession] = useState({})
     const [days, setDays] = useState([])
